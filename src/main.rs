@@ -11,10 +11,12 @@ fn main() {
 
         let mut guess: String = String::new()
 
+        // USING THE STANDARD LIBRARY TO ACCEPT INPUT AS STRINGS
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
 
+        //PARSING THE INPUT FROM STRING TO A 32-BIT INTEGER
         let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
