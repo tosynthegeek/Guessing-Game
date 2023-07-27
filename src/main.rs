@@ -9,9 +9,7 @@ fn main() {
 
         println!("Please input your guess!");
 
-        let mut guess: String = String::new();
-
-        println!("The secret number is: {}", secret_number);
+        let mut guess: String = String::new()
 
         io::stdin()
             .read_line(&mut guess)
@@ -29,6 +27,7 @@ fn main() {
             Ordering::Greater => println!("Too big"),
             Ordering::Equal => {
                 println!("You won!");
+                println!("The secret number is: {}", secret_number);
                 break;
             }
         }
